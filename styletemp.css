@@ -1,0 +1,163 @@
+*{
+    margin: 0;
+    padding: 0;
+  
+  
+  }
+  
+  body{
+    min-height: 100vh;
+    background-color: #f4f9fc;
+    font-family:  "Roboto";
+    color: #0f1b61;
+  
+  }
+  
+  /*navbar*/
+  
+  .main-nav__menu{
+    width: 100%;
+    list-style: none;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+  }
+  .main-nav__menu-item{
+    height: auto;
+  }
+  
+  .main-nav__menu-item-link{
+  height: 100%;
+  padding: 8px 32px;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  font-family:   "Roboto";
+  color: #0f1b61;
+  font-size: 1.25em;
+  font-weight: 600;
+  }
+  
+  .main-nav__menu-item-link:hover{
+  font-size: 2em;
+  font-size-adjust: 2em;
+  }
+  
+  .main-nav__menu-item:first-child{
+    margin-right: auto;
+  }
+  
+  
+  .main-nav__mobile-item{
+    width: 100%;
+   
+  
+  }
+  .main-nav__mobile-link{
+      width: 100%;
+  
+  }
+  
+  .main-nav__mobile-menu{
+    display: none;
+  }
+  
+  
+  @media(max-width:800px){
+    
+    .main-nav__menu{
+      display: none;
+    }
+  .main-nav__mobile-menu{
+    display: block;
+    height: fit-content;
+    width: fit-content;
+  
+  }
+  .nav__mobile-menu-icon-container{
+    display: flex;
+  
+  }
+  
+  .nav__mobile-menu-link-container{
+   
+    flex-direction: row;
+    display: flex;
+    position: fixed;
+    top:0;
+    right:0;
+    height:100vh;
+    width:250px;
+    z-index:999;
+    background-color: rbga(255,255,255,0.2);
+    backdrop-filter: blur(10px);
+    box-sizing: -10px 0 10px rgba(0,0,0,0.1);
+    flex-direction:column ;
+    align-items: flex-start;
+    justify-content: flex-start;
+    display: none;
+  
+  }
+  
+  
+  }
+  
+  
+  
+  /*Hero Section*/
+  .section-hero{
+    margin: 8px 32px;
+    
+  
+    background-color: white;
+    display: flex;
+  justify-content: start;
+    row-gap: 20px;
+    align-items: center;
+  }
+  .section-hero h1{
+    width: 50vw;
+    font-size: 2em;
+    text-align: center;
+    line-height: 1.5em;
+    padding: 1.5rem;
+  }
+  .section-hero h1 b{
+    font-family: "Racing Sans One";
+    font-size: 4em;
+  }
+  
+  .section-hero h3{
+    line-height: 2em;
+    text-align: center;
+  }
+  .section-hero img{
+    width: 750px;
+    height: auto;
+  }
+   
+  
+  @media(max-width:800px){
+    .section-hero{
+      flex-direction: column-reverse;
+     
+   
+    }
+    
+    .section-hero h1 b{
+     font-size:2em ;
+    }
+    .section-hero img{
+      width:450px;
+      height: auto;
+    }
+    .section-hero h3{
+      display: none;
+    }
+  }
+  
+  
+  /* Animation*/
+  @keyframes mymove {
+    100% {font-size: 2em;}
+  }

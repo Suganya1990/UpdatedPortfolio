@@ -1,0 +1,191 @@
+/*Variables*/
+
+:root {
+
+  --primaryColor: #46b3c0;
+  --secondaryColor:#a89ede;
+  --accentColor:#9168cc;
+  --backgroundColor:#fafdfd;
+  --textColor: #071516;
+
+  
+}
+/*CSS Reset*/
+
+*{
+  margin:0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Roboto";
+}
+
+
+/*Navigation Bar*/
+
+.nav{
+  width:100vw;
+  height: 80px;
+  position: fixed; 
+  top: 0;
+  left: 0;
+  right: 0;
+
+}
+.nav__list{
+  display: flex;
+  flex-direction: row;
+  list-style-type: none;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+/*nav - links */
+
+.nav__item{
+  font-size:18px;
+  padding: calc(8px + 1.5625vw);
+  transition: transform 0.2s ease-in-out; /* Animation */
+}
+
+.nav__item:hover:not(:first-child){
+  transform: scale(1.2);
+  font-weight:bold !important;
+}
+.nav_item:active{
+  text-decoration: underline;
+}
+.nav__link{
+  text-decoration: none;
+  color: var(--textColor);
+}
+/*nav - logo*/
+.nav__item:first-of-type{
+  margin-right: auto; 
+}
+
+.nav__item-logo{
+  transition-property: transform;
+    transition-duration: 1s;
+}
+
+.nav__item-logo:hover{
+  animation-name: rotate; 
+    animation-duration: 2s; 
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+  
+}
+
+.nav__list-mobile{
+  display: none;
+}
+
+/*Nav Mobile */
+@media(max-width:800px){
+  .nav__list-desktop{
+      display:none;
+  }
+  .nav__list-mobile{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-end;
+   }
+   .nav__wrapper-menu{
+    display: flex;
+    flex-direction: column;
+    
+
+   }
+   .nav__wrapper-icon{
+    display: flex;
+    flex-direction: row;
+   }
+   .nav__wrapper-links{
+    display: none;
+    
+   }
+   .nav__wrapper-logo{
+    margin-right: auto;
+   
+   }
+   .nav__wrapper-links{
+    flex-direction: row;
+    position: fixed;
+    top:65px;
+    right:0;
+    height:100vh;
+    width:250px;
+    z-index:999;
+    background-color: rbga(255,255,255,0.2);
+    backdrop-filter: blur(10px);
+    box-sizing: -10px 0 10px rgba(0,0,0,0.1);
+    flex-direction:column ;
+    align-items: flex-start;
+    justify-content: flex-start;
+    display: none;
+   }
+   .nav__link-close{
+    display: none;
+   }
+
+}
+
+
+/*Annimation*/
+@keyframes rotate {
+  from {transform: rotate(0deg);}
+  to {transform: rotate(360deg);}
+}
+
+/*Landing page  | Hero Page */
+
+
+.section-hero{
+  margin: 8px 32px;
+  
+
+  background-color: white;
+  display: flex;
+  align-items: center;
+}
+.section-hero h1{
+  width: 50vw;
+  font-size: 2em;
+  text-align: center;
+  line-height: 1.5em;
+  padding: 1.5rem;
+}
+.section-hero h1 b{
+  font-family: "Racing Sans One";
+  font-size: 4em;
+}
+
+.section-hero h3{
+  line-height: 2em;
+  text-align: center;
+}
+.section-hero img{
+  width: 750px;
+  height: auto;
+}
+
+
+@media(max-width:800px){
+  .section-hero{
+    flex-direction: column-reverse;
+   
+ 
+  }
+  
+  .section-hero h1 b{
+   font-size:2em ;
+  }
+  .section-hero img{
+    width:450px;
+    height: auto;
+  }
+  .section-hero h3{
+    display: none;
+  }
+}
