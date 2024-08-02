@@ -176,15 +176,10 @@ padding: 16px 8px 8px 8px;
 	text-decoration:none;
 }
 
-.home h3{
-	font-size:30px;
-	text-align: left;
-  color:#009393;
-  margin-left:15%;
-	font-weight:400;
-}
+
 
 .stage{
+  border:1px solid purple;
 	width: auto;
 	margin-top: 15px;
     height: 100px;
